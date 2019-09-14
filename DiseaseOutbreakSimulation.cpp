@@ -1,4 +1,4 @@
-//File name: Homework2.cpp
+//File name: DiseaseOutbreakSimulation.cpp
 //Author: Sophia Boisvert
 //Email Address: SophiaBoisvert@my.unt.edu
 //Assignment number: 2
