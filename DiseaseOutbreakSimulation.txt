@@ -2,10 +2,10 @@
 //Author: Sophia Boisvert
 //Email Address: SophiaBoisvert@my.unt.edu
 //Assignment number: 2
-/*Description: The purpose of this programming project is to write a C++ program to 
+/*Description: The purpose of this program is to 
 simulate a disease outbreak and determine how many days the outbreak lasted and the 
 infected, susceptible, and recoverd on those days*/
-//Last changed: 20/09/2017
+//Last changed: 14/09/2019
 
 #include <iostream>
 using namespace std;
@@ -23,58 +23,48 @@ int main()
 	int B; //contact rate
 	int y; //recovery rate
 
-	//print out header
-	cout << "Computer Science and Engineering\nCSCE 1030 - Computer Science I\nSophia Boisver\tsmb0506\tSophiaBoisvert@my.unt.edu";
-
-	//prompt user for total number of people
+	
 	cout << "Enter the total number of people (total number > 0) :";
-
-	//read in total number of people
 	cin >> people;
 	
 	//check to see if the entered number is acceptable. If not, re-prompt the user until an acceptable number is inputted
 	while(people <= 0) 
 		{
-			cout << "\nThe number you entered was less than or equal to zero. Please enter another number greater than 0." << endl;
+			cout << "\nThe number you entered was less than or equal to zero. Please enter another number greater than 0." 				<< endl;
 			cout << "Enter the total number of people (total number > 0) :";
 			cin >> people;
 		}
 
-	//prompt user for intial number of infected people
-	cout << "Enter the intial number of infected people (total number of people > intial number infected > 0) :";
 	
-	//read intial number of people into Ii
+	cout << "Enter the intial number of infected people (total number of people > intial number infected > 0) :";
 	cin >> Ii;	
 
+	//check to see if the entered number is acceptable. If not, re-prompt the user until an acceptable number is inputted
 	while((Ii <= 0) || (Ii > people))
 		{
-			cout << "\nThe number you entered was less than or equal to zero or greater than the total number of people. Please enter another number greater than 0 and less than the number of people." << endl;
+			cout << "\nThe number you entered was less than or equal to zero or greater than the total number of people. 				Please enter another number greater than 0 and less than the number of people." << endl;
 			cout << "Enter the intial number of infected people (total number of people > intial number infected > 0) :";
 			cin >> Ii;
 		}	
 
-	//prompt user for infection rate
 	cout << "Enter the total number of people in the simulation (1 > infection rate > 0) :";
-
-	//read in infection rate
 	cin >> B;
 
-	while((B < 0) || (B > 1) //check to see if the entered number is acceptable. If not, re-prompt the user until an acceptable number is inputted
+	//check to see if the entered number is acceptable. If not, re-prompt the user until an acceptable number is inputted
+	while((B < 0) || (B > 1) 
 		{
-			cout << "\nThe number you entered was not greater than zero and less than 1. Please enter another number greater than 0 and less than 1." << endl;
+			cout << "\nThe number you entered was not greater than zero and less than 1. Please enter another number greater 			than 0 and less than 1." << endl;
 			cout << "Enter the infection rate (1 > infection rate > 0) :";
 			cin >> B;
 		}
 
-	//prompt user for recovery rate
 	cout << "Enter the total number of people in the simulation (1 > recovery rate > 0) :";
-
-	//read in recovery rate
 	cin >> y;
 
-	while((y < 0) || (y > 1) //check to see if the entered number is acceptable. If not, re-prompt the user until an acceptable number is inputted
+	//check to see if the entered number is acceptable. If not, re-prompt the user until an acceptable number is inputted
+	while((y < 0) || (y > 1)
 		{
-			cout << "\nThe number you entered was not greater than zero and less than 1. Please enter another number greater than 0 and less than 1." << endl;
+			cout << "\nThe number you entered was not greater than zero and less than 1. Please enter another number greater 			 than 0 and less than 1." << endl;
 			cout << "Enter the recovery rate (1 > recovery rate > 0) :";
 			cin >> y;
 		}
@@ -87,10 +77,9 @@ int main()
 	Ii_1 = Ii;
 	Ri_1 = Ri;
 
-	//set the day to day 1;
 	day = 1;
 
-	//run the calculation for the next day
+	//run calculation for the days
 	while (Ii > 0)
 		{
 			//Calculate the susceptible
