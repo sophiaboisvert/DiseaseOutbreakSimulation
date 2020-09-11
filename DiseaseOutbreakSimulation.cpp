@@ -1,6 +1,5 @@
 //File name: DiseaseOutbreakSimulation.cpp
 //Author: Sophia Boisvert
-//Email Address: SophiaBoisvert@my.unt.edu
 //Assignment number: 2
 /*Description: The purpose of this program is to 
 simulate a disease outbreak and determine how many days the outbreak lasted and the 
